@@ -12,11 +12,11 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex space-x-8 items-center">
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center hover:text-orange-500 transition-colors">
               <img 
                 src="/lovable-uploads/f3a7b031-e2a8-4d15-a1b2-dbeb5ac5f465.png" 
                 alt="Da Nu Breed Logo" 
-                className="h-12 w-auto" // Increased from h-8 to h-12
+                className="h-12 w-auto"
               />
             </Link>
             <div className="hidden sm:flex sm:space-x-4">
