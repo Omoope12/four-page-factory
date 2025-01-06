@@ -16,7 +16,7 @@ const Navigation = () => {
               <img 
                 src="/lovable-uploads/f3a7b031-e2a8-4d15-a1b2-dbeb5ac5f465.png" 
                 alt="Da Nu Breed Logo" 
-                className="h-8 w-auto"
+                className="h-12 w-auto" // Increased from h-8 to h-12
               />
             </Link>
             <div className="hidden sm:flex sm:space-x-4">
