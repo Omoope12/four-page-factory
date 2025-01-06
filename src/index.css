@@ -37,7 +37,7 @@
 }
 
 .nav-link {
-  @apply px-4 py-2 text-sm font-medium transition-colors hover:text-primary;
+  @apply px-4 py-2 text-sm font-medium transition-colors hover:text-orange-500;
 }
 
 .nav-link.active {
