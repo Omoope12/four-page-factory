@@ -8,7 +8,7 @@ const Home = () => {
       <section className="text-center space-y-6 py-16">
         <h1 className="text-5xl font-bold text-primary">Welcome to Da Nu Breed</h1>
         <p className="text-xl text-grey-200 max-w-2xl mx-auto">
-          We create amazing digital experiences that help businesses grow and succeed in the modern world.
+          We are global leaders in the modern world.
         </p>
         <div className="flex justify-center gap-4">
           <Button asChild>
@@ -32,7 +32,7 @@ const Home = () => {
           },
           {
             title: "Results",
-            description: "Measurable impact for your business"
+            description: "Measurable impact for your life"
           }
         ].map((feature) => (
           <div key={feature.title} className="p-6 rounded-lg border bg-card text-card-foreground shadow-sm">
