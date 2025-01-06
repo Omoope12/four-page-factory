@@ -7,7 +7,7 @@ const Home = () => {
     <div className="space-y-16">
       <section className="text-center space-y-6 py-16">
         <h1 className="text-5xl font-bold text-primary">Welcome to Da Nu Breed</h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+        <p className="text-xl text-orange-600 max-w-2xl mx-auto">
           We create amazing digital experiences that help businesses grow and succeed in the modern world.
         </p>
         <div className="flex justify-center gap-4">
