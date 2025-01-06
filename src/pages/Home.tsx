@@ -10,7 +10,7 @@ const Home = () => {
         <p className="text-xl text-grey-200 max-w-2xl mx-auto">
           We are global leaders in the modern world.
         </p>
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center gap-4"> 
           <Button asChild>
             <Link to="/services">Our Services <ArrowRight className="ml-2 h-4 w-4" /></Link>
           </Button>
