@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Home = () => {
   return (
-    <div className="space-y-16">
+    <div className="space-y-24">
+      {/* Hero Section with animated background */}
       <section className="text-center space-y-6 py-16 relative overflow-hidden">
         {/* Background animated layers */}
         <div className="absolute inset-0 flex items-center justify-center">
@@ -32,6 +34,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Features Grid Section */}
       <section className="grid md:grid-cols-3 gap-8 relative animate-[fade-in_0.5s_ease-out_0.9s_both]">
         {[
           {
@@ -58,6 +61,86 @@ const Home = () => {
             <p className="text-gray-600">{feature.description}</p>
           </div>
         ))}
+      </section>
+
+      {/* Zigzag Layout Section */}
+      <section className="space-y-16 animate-[fade-in_0.5s_ease-out_1.2s_both]">
+        <h2 className="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
+        {[
+          {
+            title: "Expert Team",
+            description: "Our team of experts brings years of experience and knowledge to every project.",
+            imagePosition: "right"
+          },
+          {
+            title: "Innovative Solutions",
+            description: "We leverage cutting-edge technology to deliver outstanding results.",
+            imagePosition: "left"
+          },
+          {
+            title: "Customer Success",
+            description: "Your success is our priority. We're committed to exceeding expectations.",
+            imagePosition: "right"
+          }
+        ].map((item, index) => (
+          <div 
+            key={item.title}
+            className={`flex flex-col ${item.imagePosition === 'right' ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8 py-8`}
+          >
+            <div className="flex-1 space-y-4">
+              <h3 className="text-2xl font-semibold">{item.title}</h3>
+              <p className="text-gray-600">{item.description}</p>
+            </div>
+            <div className="flex-1">
+              <div className="bg-gradient-to-br from-orange-100 to-primary/20 aspect-video rounded-lg"></div>
+            </div>
+          </div>
+        ))}
+      </section>
+
+      {/* Cards Grid Layout */}
+      <section className="animate-[fade-in_0.5s_ease-out_1.5s_both]">
+        <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Digital Transformation",
+              description: "Transform your business with cutting-edge digital solutions"
+            },
+            {
+              title: "Strategy Consulting",
+              description: "Expert guidance for your business growth and success"
+            },
+            {
+              title: "Technology Solutions",
+              description: "Custom technology solutions for your unique needs"
+            },
+            {
+              title: "Data Analytics",
+              description: "Turn your data into actionable insights"
+            },
+            {
+              title: "Cloud Services",
+              description: "Secure and scalable cloud infrastructure solutions"
+            },
+            {
+              title: "Cybersecurity",
+              description: "Protect your business with advanced security measures"
+            }
+          ].map((service, index) => (
+            <Card 
+              key={service.title}
+              className="hover:scale-105 transition-transform"
+            >
+              <CardHeader>
+                <CardTitle>{service.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">{service.description}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </section>
     </div>
   );
